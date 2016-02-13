@@ -8,11 +8,7 @@ const post = (url, body) => fetch(url, {
     'Content-Type': 'application/json',
     'Accept': 'application/json'
   }
-}).then(res => {
-  res.json().then(res => {
-    ServerActions.receiveLinks(res.data.links);
-  });
-});
+}).then(res => res.json());
 
 const API = {
   fetchLinks() {
@@ -25,7 +21,9 @@ const API = {
         }
       }`
     };
-    post('/graphql', query);
+    post('/graphql', query).then(res => {
+      ServerActions.receiveLinks(res.data.links);
+    });
   }
 };
 
