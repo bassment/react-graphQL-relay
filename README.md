@@ -1,7 +1,9 @@
-# react-mongo-flux
-_React application using MongoLab and Flux_ using:
+# react-graphQL-relay
+_React application using MongoLab, GraphQL and Relay_ using:
 
-**Node, Express, React, ES6, Flux, MongoLab** 
+**Node, MongoLab, Express, ES6** 
+
+**React, GraphQL, Relay**
 
 **Webpack, HotModuleReplacement**
 
